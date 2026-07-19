@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-[#f4f6f9] text-navy-900 antialiased;
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-white rounded-[14px] shadow-card;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  .card:hover {
+    @apply shadow-card-hover;
+    transition: box-shadow 0.2s ease;
+  }
+  .card-header {
+    @apply px-5 py-4;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .card-body {
+    @apply px-5 py-4;
+  }
+
+  /* ── Page layout ── */
+  .page-header {
+    @apply mb-6;
+  }
+  .page-title {
+    @apply text-xl font-semibold text-navy-900;
+  }
+  .page-description {
+    @apply text-sm text-gray-500 mt-0.5;
+  }
+
+  /* ── Stat cards ── */
+  .stat-value {
+    @apply text-[28px] font-bold text-navy-900 leading-none;
+  }
+  .stat-label {
+    @apply text-xs font-medium text-gray-500 mt-1;
+  }
+
+  /* ── Badges / Status pills ── */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-success {
+    @apply badge bg-green-50 text-green-700;
+  }
+  .badge-warning {
+    @apply badge bg-amber-50 text-amber-700;
+  }
+  .badge-danger {
+    @apply badge bg-red-50 text-red-700;
+  }
+  .badge-info {
+    @apply badge bg-brand-50 text-brand-700;
+  }
+  .badge-neutral {
+    @apply badge bg-gray-100 text-gray-600;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium rounded-btn transition-colors shadow-sm;
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 text-sm font-medium rounded-btn border transition-colors;
+    border-color: rgba(0,0,0,0.12);
+  }
+  .btn-danger {
+    @apply px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-btn transition-colors;
+  }
+
+  /* ── Tables ── */
+  .table-wrapper {
+    @apply bg-white rounded-[14px] overflow-hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  .table-header {
+    @apply bg-[#f9fafb] text-left text-[11px] font-semibold text-gray-500 uppercase tracking-wider px-5 py-3;
+  }
+  .table-row {
+    @apply border-t px-5 py-3.5 text-sm text-navy-900;
+    border-color: rgba(0,0,0,0.04);
+  }
+  .table-row:hover {
+    @apply bg-[#f9fafb];
+  }
+
+  /* ── Icon badge circles in stat cards ── */
+  .icon-badge {
+    @apply w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0;
+  }
+  .icon-badge-blue   { @apply bg-blue-50   text-blue-500;   }
+  .icon-badge-green  { @apply bg-green-50  text-green-500;  }
+  .icon-badge-purple { @apply bg-purple-50 text-purple-500; }
+  .icon-badge-orange { @apply bg-orange-50 text-orange-400; }
+  .icon-badge-red    { @apply bg-red-50    text-red-500;    }
+  .icon-badge-teal   { @apply bg-teal-50   text-teal-500;   }
+  .icon-badge-amber  { @apply bg-amber-50  text-amber-500;  }
+  .icon-badge-brand  { @apply bg-brand-50  text-brand-600;  }
+
+  /* ── Empty state ── */
+  .empty-state {
+    @apply flex flex-col items-center justify-center py-12 px-4 text-center;
+  }
+  .empty-state-icon {
+    @apply w-16 h-16 mb-4 text-gray-300;
+  }
+  .empty-state-text {
+    @apply text-sm text-gray-400 font-medium;
+  }
+  .empty-state-sub {
+    @apply text-xs text-gray-300 mt-1;
+  }
+}
