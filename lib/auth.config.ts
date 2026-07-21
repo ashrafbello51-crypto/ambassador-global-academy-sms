@@ -3,7 +3,7 @@ import Credentials from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/prisma";
 import { loginSchema } from "@/lib/validations/auth.schema";
-import type { Role } from "@/lib/rbac";
+import type { Role } from "@/lib/rbac-core";
 import bcrypt from "bcryptjs";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({

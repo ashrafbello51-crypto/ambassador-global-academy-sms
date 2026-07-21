@@ -1,14 +1,7 @@
+import path from "path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    turbo: {
-      rules: {
-        "*.svg": ["@svgr/webpack"],
-      },
-      resolveAlias: {},
-    },
-  },
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 768, 1024, 1280, 1536],
@@ -21,6 +14,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   compress: true,
+  outputFileTracingRoot: path.join(__dirname),
 };
 
 export default nextConfig;
