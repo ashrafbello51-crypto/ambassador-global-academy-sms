@@ -13,10 +13,10 @@ export default async function Home() {
       <div className="text-center">
         <h1 className="text-2xl font-bold mb-4">School Management System</h1>
         <p className="text-gray-600 mb-4">
-          Welcome, {session.user.name || session.user.email}
+          Welcome, {session?.user?.name || session?.user?.email || "User"}
         </p>
         <p className="text-sm text-gray-400">
-          Role: {session.user.role} | Dashboard coming soon
+          Role: {session?.user?.role || "Unknown"} | Dashboard coming soon
         </p>
       </div>
     </div>
